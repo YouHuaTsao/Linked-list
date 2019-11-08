@@ -1,0 +1,9 @@
+1. How to compile the code and run the main function
+    g++ *.cpp -o myprogram
+    ./myprogram
+
+2.How to use this library in your code
+    Put the files in this folder into your working directory, in your code, add the following content to include our library
+        #include "List342.h"
+    to inlucde this library. If you have your own type named myClass, you can declare a list of myClass by
+        List342<Child> class1;`
