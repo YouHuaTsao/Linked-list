@@ -230,7 +230,24 @@ class List342
         }
         head = NULL;
     }
-    
+
+    bool query(T target)
+    {
+        Node<T> *p = head;
+        if(p == NULL)
+        {
+            return false;
+        }
+        while(p != NULL)
+        {
+            if(target == *(p->item)){
+                return true;
+            }
+            p = p->next;
+        }
+        return false;
+    }
+ 
     //This function allows user to merge two lists; memory allocation is not needed for both lhs and rhs. rhs will set to be empty list by this function.
     bool Merge(List342 &list1)
     {

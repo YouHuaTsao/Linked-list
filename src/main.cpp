@@ -25,8 +25,10 @@ int main(int argc, const char * argv[]) {
     class1.Insert(&c3);
     class1.Insert(&c4);
     class1.Insert(&c5);
+    assert(class1.query(c6)==false);
     class1.Insert(&c6);
     class1.Insert(&c5);
+    assert(class1.query(c6)==true);
     cout << "class1: " << class1 << endl;
     
     if (class1.Insert(&c1))
@@ -53,7 +55,9 @@ int main(int argc, const char * argv[]) {
         cout << "ERROR:: Class2 should be empty empty" << endl;
     }
 
+    assert(class1.query(c4) == true);
     class1.Remove(c4, c11);
+    assert(class1.query(c4) == false);
     class1.Remove(c5, c11);
     class1.Remove(c11, c11);
     if(class1.Remove(c1, c11))
